@@ -1,0 +1,17 @@
+# Function to generate the Fibonacci sequence up to 'n' terms
+def fibonacci_sequence(n):
+    # Initialize the first two terms of the Fibonacci sequence
+    a, b = 0, 1
+    sequence = []  # List to store the Fibonacci sequence
+    
+    # Loop 'n' times to generate 'n' terms
+    for _ in range(n):
+        sequence.append(a)  # Add the current term to the sequence
+        a, b = b, a + b  # Update the values of 'a' and 'b' to the next terms in the sequence
+        
+    return sequence
+
+# Input: Number of terms to generate
+n_terms = 10
+# Generate and print the Fibonacci sequence
+print(fibonacci_sequence(n_terms))
